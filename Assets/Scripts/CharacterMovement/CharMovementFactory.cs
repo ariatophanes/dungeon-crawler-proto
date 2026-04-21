@@ -1,12 +1,11 @@
 using System.Collections.Generic;
 using Movement;
-using UnityEngine;
 
 namespace CharacterMovement
 {
     public class CharacterMovementFactory
     {
-        public CharMovement Create(IMovementSettings s, Vector2 startPosition)
+        public CharMovement Create(IMovementSettings s)
         {
             var modifiers = new List<IVelocityModifier>
             {
@@ -15,7 +14,7 @@ namespace CharacterMovement
                 new SpeedLimiter(s.MaxSpeed),
             };
 
-            return new CharMovement(modifiers, startPosition);
+            return new CharMovement(modifiers);
         }
     }
 }

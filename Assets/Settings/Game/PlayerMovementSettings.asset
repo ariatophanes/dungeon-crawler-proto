@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Movement.MovementSettings
   <MaxSpeed>k__BackingField: 8
   <Acceleration>k__BackingField: 45
-  <MoveFriction>k__BackingField: 0.01
-  <StopFriction>k__BackingField: 0.0001
-  <TurnFriction>k__BackingField: 0.0001
+  <MoveFriction>k__BackingField: 0.001
+  <StopFriction>k__BackingField: 0.000001
+  <TurnFriction>k__BackingField: 0.000001

@@ -7,22 +7,14 @@ namespace CharacterMovement
     public class CharMovement : ICharacterMovement
     {
         private readonly IReadOnlyList<IVelocityModifier> _modifiers;
-        private Vector2 _velocity;
-
-        public Vector2 Position { get; private set; }
-
-        public CharMovement(IReadOnlyList<IVelocityModifier> modifiers, Vector2 startPosition)
-        {
-            _modifiers = modifiers;
-            Position = startPosition;
-        }
-
+        public Vector2 Velocity { get; private set; }
+        public CharMovement(IReadOnlyList<IVelocityModifier> modifiers) => _modifiers = modifiers;
+        
         public void Tick(Vector2 input, float deltaTime)
         {
-            _velocity = _modifiers.Aggregate(_velocity, (v, modifier) => modifier.Apply(v, input, deltaTime));
-            Position += _velocity * deltaTime;
+            Velocity = _modifiers.Aggregate(Velocity,
+                (v, mod) => mod.Apply(v, input, deltaTime));
         }
-
-        public void Synchronise(Vector2 position) => Position = position;
+        public void SetVelocity(Vector2 v) => Velocity = v;
     }
 }

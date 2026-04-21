@@ -7,6 +7,8 @@ namespace Spawn.Player
     public class PlayerSettings : ScriptableObject
     {
         [field: SerializeField] public Sprite Sprite { get; private set; }
+        [field: SerializeField] public Sprite ShadowSprite { get; private set; }
+        [field: SerializeField] public GameObject RunVFX { get; private set; } //TODO: move to diff settings
         [field: SerializeField] public MovementSettings MovementSettings { get; private set; }
     }
 }

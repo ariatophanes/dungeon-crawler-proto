@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: PlayerSettings
   m_EditorClassIdentifier: Assembly-CSharp::Spawn.Player.PlayerSettings
   <Sprite>k__BackingField: {fileID: -3846989261494495056, guid: 0866d8293cfa3460f80fa1c5e596071b, type: 3}
+  <ShadowSprite>k__BackingField: {fileID: 21300000, guid: d436cf1f7c9694cee88268d965e3d1b0, type: 3}
+  <RunVFX>k__BackingField: {fileID: 3072862393338882652, guid: cd32a8c45f87340278beec807d43d3ed, type: 3}
   <MovementSettings>k__BackingField: {fileID: 11400000, guid: df9698ab42bee46338e8eae6966ad5af, type: 2}
